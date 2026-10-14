@@ -1,0 +1,12 @@
+
+services:
+  prediction-api:
+    image: syedamahamzaidi/linear-regression-api:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      STUDENT_ROLL_NUMBER: "FA23-BDS-019"
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
